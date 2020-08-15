@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
+
   <head>
     <title>main</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,7 +19,7 @@
     <!-- navbar code start  -->
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home' %}">Aman Baid</a>
+        <a class="navbar-brand" href="{% url 'homepage' %}">Aman Baid</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,20 +28,28 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+              <!-- h -->
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Gallery</a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">Recommendations</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Recommendations
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Books</a>
+                <a class="dropdown-item" href="#">Playlists</a>
+             
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">About Me</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">About Me</a>
+                <a class="nav-link" href="#">Contact</a>
             </li>
 
           </ul>
@@ -49,17 +59,20 @@
 
     <!-- navbar code end -->
 
-    <!-- jumbotron start -->
+  {% block content %}
+  {% endblock %}
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Welcome to my Website</h1>
-          <p class="lead">You Will find all kinds of awesome Stuff here</p>
-        </div>
-      </div>
 
-    
-    <!-- jumbotron end -->
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Made by Aman Baid</span>
+    </div>
+  </footer>
+
+
 
 
 
