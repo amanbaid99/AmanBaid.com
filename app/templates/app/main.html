@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+   
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   </head>
 
@@ -27,12 +27,12 @@
         <div  class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
 
               <!-- h -->
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Gallery</a>
+              <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -66,11 +66,11 @@
 
 
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <span class="text-muted">Made by Aman Baid</span>
     </div>
-  </footer>
+  </footer> -->
 
 
 
