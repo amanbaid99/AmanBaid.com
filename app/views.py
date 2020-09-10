@@ -12,3 +12,7 @@ def HomePage(request):
 def gallery(request):
     images = Image.objects.all()
     return render(request,"app/gallery.html",{'images': images}) 
+
+
+def books(request):
+    return render(request,"app/books.html")
