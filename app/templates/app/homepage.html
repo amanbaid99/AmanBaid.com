@@ -6,29 +6,9 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="row">
-            <div id="carouselExampleControls" class="carousel slide col-md-4 container" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="{% static 'images/my.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="{% static 'images/IMG_5812-01.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
-                  <!-- <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div> -->
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-
-    
+          <div class="col-md-4">
+            <img src="{% static 'images/personal/profile.jpg' %}" class="d-block w-100" style="margin-left: 20px;" alt="...">
+          </div>
             <!-- <div class="carousel slide col-md-4 container">
                 <img src="{% static 'images/my.jpg' %}" alt="" class="img-thumbnail">
             </div> -->
@@ -36,11 +16,13 @@
             <div class="col-md-6 container">
                 <h1 class="display-4"><strong> Hi, I'm  Aman Baid </strong></h1>
                 <!-- <div > -->
-                    <a class="subheading mb-5" href="mailto:name@email.com">amanbaid@tutanota.com</a>
+                    <a class="subheading mb-5" href="mailto:name@email.com">amanbaid99@gmail.com</a>
+                    <h6>( drop me a mail ;) )</h6>
                 <!-- </div> -->
                 <hr>
                 <h5>Welcome to My Website!</h5>
-                <h5>An Aspiring Software Developer and  Tech Enthusiast who loves exploring,breaking and fixing stuff</h5>
+                <h5>An Aspiring Software Developer and a Tech Enthusiast who loves exploring,breaking and fixing stuff</h5>
+                <h5>I also love playing the guitar and taking pictures of anything and everything...check out my <a href="{% url 'gallery' %}">gallery</a></h5>
                 <div class="social-icons">
                     <!-- <a href="#">
                       <i class="fab fa-linkedin-in"></i>
@@ -61,15 +43,17 @@
         </div>
     </div>
 
+    <div class="container ">
 
-<!-- jumbotron end -->
+    {% include "app/education.html" %}
 
-<!-- expertice  block start-->
+    {% include "app/skill.html" %}
+
+    {% include "app/certs.html" %}
+
+    {% include "app/interests.html" %}
 
 
-
-
-<!-- expertice block end -->
-
+  </div>
 
 {% endblock content %}

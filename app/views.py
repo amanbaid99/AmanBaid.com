@@ -14,5 +14,5 @@ def gallery(request):
     return render(request,"app/gallery.html",{'images': images}) 
 
 
-def books(request):
-    return render(request,"app/books.html")
+def skill(request):
+    return render(request,"app/skill.html")
